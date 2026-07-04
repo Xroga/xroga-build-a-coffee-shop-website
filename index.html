@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Cup · Coffee Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Cozy<span>Cup</span></div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero">
+      <h1>☕ Welcome to <span>Cozy Cup</span></h1>
+      <p>Handcrafted coffee &amp; warm pastries — your cozy corner in the city.</p>
+      <a href="#menu" class="btn">Explore our menu</a>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <h2 class="section-title">☕ Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-category">
+        <h3>Coffee</h3>
+        <div class="menu-item"><span class="item-name">Espresso</span><span class="item-price">$3.50</span></div>
+        <div class="menu-item"><span class="item-name">Cappuccino</span><span class="item-price">$4.50</span></div>
+        <div class="menu-item"><span class="item-name">Latte</span><span class="item-price">$4.75</span></div>
+        <div class="menu-item"><span class="item-name">Mocha</span><span class="item-price">$5.25</span></div>
+        <div class="menu-item"><span class="item-name">Cold Brew</span><span class="item-price">$4.50</span></div>
+      </div>
+      <div class="menu-category">
+        <h3>Tea</h3>
+        <div class="menu-item"><span class="item-name">Earl Grey</span><span class="item-price">$3.25</span></div>
+        <div class="menu-item"><span class="item-name">Chai Latte</span><span class="item-price">$4.50</span></div>
+        <div class="menu-item"><span class="item-name">Green Tea</span><span class="item-price">$3.00</span></div>
+        <div class="menu-item"><span class="item-name">Herbal Infusion</span><span class="item-price">$3.50</span></div>
+      </div>
+      <div class="menu-category">
+        <h3>Pastries</h3>
+        <div class="menu-item"><span class="item-name">Croissant</span><span class="item-price">$3.75</span></div>
+        <div class="menu-item"><span class="item-name">Blueberry Muffin</span><span class="item-price">$3.50</span></div>
+        <div class="menu-item"><span class="item-name">Cinnamon Roll</span><span class="item-price">$4.25</span></div>
+        <div class="menu-item"><span class="item-name">Banana Bread</span><span class="item-price">$3.50</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER -->
+  <section id="order">
+    <h2 class="section-title">🛒 Order Online</h2>
+    <div class="order-layout">
+      <div class="order-items">
+        <div class="order-card">
+          <div><span class="item-info">Espresso</span><br><span class="item-price">$3.50</span></div>
+          <button class="add-btn" data-name="Espresso" data-price="3.50">Add</button>
+        </div>
+        <div class="order-card">
+          <div><span class="item-info">Cappuccino</span><br><span class="item-price">$4.50</span></div>
+          <button class="add-btn" data-name="Cappuccino" data-price="4.50">Add</button>
+        </div>
+        <div class="order-card">
+          <div><span class="item-info">Latte</span><br><span class="item-price">$4.75</span></div>
+          <button class="add-btn" data-name="Latte" data-price="4.75">Add</button>
+        </div>
+        <div class="order-card">
+          <div><span class="item-info">Mocha</span><br><span class="item-price">$5.25</span></div>
+          <button class="add-btn" data-name="Mocha" data-price="5.25">Add</button>
+        </div>
+        <div class="order-card">
+          <div><span class="item-info">Croissant</span><br><span class="item-price">$3.75</span></div>
+          <button class="add-btn" data-name="Croissant" data-price="3.75">Add</button>
+        </div>
+        <div class="order-card">
+          <div><span class="item-info">Cinnamon Roll</span><br><span class="item-price">$4.25</span></div>
+          <button class="add-btn" data-name="Cinnamon Roll" data-price="4.25">Add</button>
+        </div>
+      </div>
+      <div class="cart-sidebar" id="cartSidebar">
+        <h3>🛍️ Your Cart</h3>
+        <div id="cartItems"></div>
+        <div class="cart-total">
+          <span>Total</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <button class="btn btn-gold" id="checkoutBtn" style="width:100%; margin-top:1rem;">Checkout</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2 class="section-title">📸 Our Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop" alt="Coffee shop interior">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop" alt="Latte art">
+      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=300&fit=crop" alt="Pastries display">
+      <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=300&fit=crop" alt="Coffee beans">
+      <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=400&h=300&fit=crop" alt="Cozy corner">
+      <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&h=300&fit=crop" alt="Barista at work">
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img id="lightboxImg" src="" alt="Enlarged view">
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">📞 Contact Us</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>📍 123 Bean Street, Coffeeville, CO 80222</p>
+        <p>🕐 Mon–Fri: 7am–7pm<br>Sat–Sun: 8am–5pm</p>
+        <p>📞 (555) 123-4567</p>
+        <p>✉️ hello@cozycup.com</p>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message..." required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Cozy Cup Coffee. All rights reserved.</p>
+    <!-- Absorbing the multiverse of data to emit the singularity of truth. -->
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
